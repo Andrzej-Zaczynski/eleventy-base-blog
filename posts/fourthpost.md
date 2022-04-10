@@ -1,15 +1,42 @@
 ---
-title: This is my fourth post.
-description: This is a post on My Blog about touchpoints and circling wagons.
+title: Tip program
+description: This is a post on My Blog about making a JavaScript program to calculate a tip.
 date: 2018-09-30
 tags: second tag
 layout: layouts/post.njk
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+1. Create variables for the pre-tip total and the tip percentage.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+const preTipTotal = 11;                                             
+var tip = preTipTotal * 0.15;
 
-## Section Header
+2. Calculate the new total.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+var postTipTotal = preTipTotal + tip;
 
+3. Display the tip amount in the output rounding the figure to 2 decimal places.
+
+<p id="tip"></p>
+document.getElementById("tip").innerHTML =
+'tip amount: £' + tip.toFixed(2);
+
+4. Display the total bill amount in the output rounding the figure to 2 decimal places.
+
+<p id="payment"></p>
+document.getElementById("payment").innerHTML =
+'"Your total bill, with tip, is £' + postTipTotal.toFixed(2) + '."';
+
+To sum up:
+
+<h1>Tip program</h1>
+   <p id="tip"></p>
+   <p id="payment"></p>
+   <script>
+      const preTipTotal = 11;                                             
+      var tip = preTipTotal * 0.15;                                   // Assign the product of pre_tipTotal and 15% to tip
+      var postTipTotal = preTipTotal + tip;                           // Assign the sum of preTipTotal and tip to postTipTotal
+      document.getElementById("tip").innerHTML =
+'tip amount: £' + tip.toFixed(2);                                        
+      document.getElementById("payment").innerHTML =
+'"Your total bill, with tip, is £' + postTipTotal.toFixed(2) + '."';
+   </script>
