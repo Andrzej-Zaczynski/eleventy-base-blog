@@ -1,18 +1,67 @@
 ---
-title: This is my second post.
-description: This is a post on My Blog about leveraging agile frameworks.
+title: Intro to JavaScript practicals
+description: This is a post on My Blog about intro to JavaScript practicals.
 date: 2018-07-04
 tags:
   - number 2
 layout: layouts/post.njk
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Percentage Calculator program
 
-## Section Header
+```diff-js
+function percentageCalculator(number,percentage){
+  var output = number * (percentage/100);
+  return output;  
+}
+var value = percentageCalculator(135,30);
+console.log(value);
+```
 
-<a href="{{ '/posts/firstpost/' | url }}">First post</a>
-<a href="{{ '/posts/thirdpost/' | url }}">Third post</a>
+Switch Statement program
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+```diff-js
+function drinkOrder(size,buttonName){
+  let drinkName;
+  switch(buttonName){
+    case `lemon`:
+      drinkName = `lemonade`;
+      break;
+    case `orange`:
+      drinkName = `orangeade`;
+      break;
+    case `cola`:
+      drinkName = `cola`;
+      break;
+  }
+  return `You have ordered a ${size} ${drinkName}.`;
+}
+console.log(drinkOrder(`medium`,`orange`));
+```
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+Calculator program
+
+```diff-js
+function calculator(number1,number2,operator){
+  var message;
+  var value;
+  switch(operator){
+    case `+`:
+      value = number1 + number2;
+      break;
+    case `-`:
+      value = number1 - number2;
+      break;
+    case `*`:
+      value = number1 * number2;
+      break;
+    case `/`:
+      value = number1 / number2;
+      break;
+    case `%`:
+      value = number1 % number2;
+      break;      
+  }
+  return message = `${number1} ${operator} ${number2} = ${value}`;
+}
+console.log(calculator(1,2,`+`));
+```
