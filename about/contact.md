@@ -10,13 +10,16 @@ eleventyNavigation:
 
 <form name="contact" method="POST" data-netlify="true">
     <p>
-        <label>Full Name: <input type="text" id="name" name="name" required minlength="4" /></label>   
+        <label>Full Name:<br><input type="text" id="name" name="name" required minlength="4" /></label>   
     </p>
     <p>
-        <label>Email Address: <input type="email" id="email" name="email" pattern=".+@mail\.com" required autocomplete minlength="6" multiple /></label>
+        <label>Email Address:<br><input type="email" id="email" name="email" pattern=".+@mail\.com" required autocomplete minlength="6" multiple /></label>
     </p>
     <p>
-        <label>Message: <textarea name="message" required></textarea></label>
+        <label>Message:<br><textarea name="message" required></textarea></label>
+    </p>
+    <p>
+        <input type="checkbox" checked="checked" name="subscribe"><label>terms and conditions</label>
     </p>
     <p>
         <button class="form_submit" type="submit">Send</button>
